@@ -3,13 +3,12 @@ import { Text, View } from 'react-native'
 
 type Props = {}
 
-const Login: FC<Props> = (props) => {
+const _Appointments: FC<Props> = (props) => {
 	return (
 		<View>
-			<Text>Login</Text>
+			<Text>_Appointments</Text>
 		</View>
 	)
 }
 
-export default Login
-  
+export default _Appointments
