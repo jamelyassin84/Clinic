@@ -3,12 +3,12 @@ import { Text, View } from 'react-native'
 
 type Props = {}
 
-const PrimaryButton: FC<Props> = (props) => {
+const SearchComponent: FC<Props> = (props) => {
 	return (
 		<View>
-			<Text>PrimaryButton</Text>
+			<Text>SearchComponent</Text>
 		</View>
 	)
 }
 
-export default PrimaryButton
+export default SearchComponent
