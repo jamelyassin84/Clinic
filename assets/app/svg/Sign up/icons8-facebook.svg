@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1.081" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#17a3fa"/>
+      <stop offset="1" stop-color="#056be4"/>
+    </linearGradient>
+  </defs>
+  <path id="icons8-facebook" d="M14,3a11.054,11.054,0,0,0-1.644,21.976V16.987H9.635V14.081h2.722V12.147c0-3.2,1.552-4.608,4.2-4.608a15.213,15.213,0,0,1,2.256.138v2.537H17.005c-1.124,0-1.516,1.071-1.516,2.278v1.589h3.294l-.447,2.906H15.489V25A11.054,11.054,0,0,0,14,3Z" transform="translate(-3 -3)" fill="url(#linear-gradient)"/>
+</svg>
