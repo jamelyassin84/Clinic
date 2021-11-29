@@ -3,12 +3,12 @@ import { Text, View } from 'react-native'
 
 type Props = {}
 
-const About: FC<Props> = (props) => {
+const SelectDoctorHeader: FC<Props> = (props) => {
 	return (
 		<View>
-			<Text>About</Text>
+			<Text>SelectDoctorHeader</Text>
 		</View>
 	)
 }
 
-export default About
+export default SelectDoctorHeader
