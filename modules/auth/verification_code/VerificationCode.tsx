@@ -3,12 +3,12 @@ import { Text, View } from 'react-native'
 
 type Props = {}
 
-const _Verfiicaiton: FC<Props> = (props) => {
+const VerificationCode: FC<Props> = (props) => {
 	return (
 		<View>
-			<Text>_Verfiicaiton</Text>
+			<Text>VerificationCode</Text>
 		</View>
 	)
 }
 
-export default _Verfiicaiton
+export default VerificationCode

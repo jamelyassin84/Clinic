@@ -1,13 +1,16 @@
 import React, { FC } from 'react'
-import { Text, View } from 'react-native'
+import { BoldText } from '../../../components/overides/Themed'
+import AppScreen from '../../../components/Screen'
 
 type Props = {}
 
 const _SignInScreen: FC<Props> = (props) => {
 	return (
-		<View>
-			<Text>_SignInScreen</Text>
-		</View>
+		<AppScreen>
+			<BoldText style={{ textAlign: 'center' }}>
+				Clinic appointments made easily
+			</BoldText>
+		</AppScreen>
 	)
 }
 

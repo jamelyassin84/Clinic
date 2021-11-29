@@ -13,11 +13,14 @@ import BottomTabICon from '../components/BottomTabICon'
 import Colors from '../constants/Colors'
 import useColorScheme from '../hooks/useColorScheme'
 import _Appointments from '../modules/appointments/_Appointments'
+import SetLocation from '../modules/auth/set_location/SetLocation'
+import _SignInScreen from '../modules/auth/sign-in/_SignInScreen'
+import Verification from '../modules/auth/verification/Verification'
+import VerificationCode from '../modules/auth/verification_code/VerificationCode'
 import _Home from '../modules/home/home_page/_Home'
 import _Promotions from '../modules/promotions/_Promotions'
 import _Settings from '../modules/settings/_Settings'
 import ModalScreen from '../screens/ModalScreen'
-import NotFoundScreen from '../screens/NotFoundScreen'
 import { RootStackParamList, RootTabParamList } from '../types'
 import { resolveHomeIcon } from './HomeIcons'
 
@@ -42,14 +45,29 @@ function RootNavigator() {
 	return (
 		<Stack.Navigator>
 			<Stack.Screen
-				name="Root"
-				component={BottomTabNavigator}
+				name="SignIn"
+				component={_SignInScreen}
 				options={{ headerShown: false }}
 			/>
 			<Stack.Screen
-				name="NotFound"
-				component={NotFoundScreen}
-				options={{ title: 'Oops!' }}
+				name="Verification"
+				component={Verification}
+				options={{ headerShown: false }}
+			/>
+			<Stack.Screen
+				name="VerificationCode"
+				component={VerificationCode}
+				options={{ headerShown: false }}
+			/>
+			<Stack.Screen
+				name="SetLocation"
+				component={SetLocation}
+				options={{ headerShown: false }}
+			/>
+			<Stack.Screen
+				name="Root"
+				component={BottomTabNavigator}
+				options={{ headerShown: false }}
 			/>
 			<Stack.Group screenOptions={{ presentation: 'modal' }}>
 				<Stack.Screen name="Modal" component={ModalScreen} />
@@ -175,14 +193,4 @@ function BottomTabNavigator() {
 			/>
 		</BottomTab.Navigator>
 	)
-}
-
-/**
- * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
- */
-function TabBarIcon(props: {
-	name: React.ComponentProps<typeof FontAwesome>['name']
-	color: string
-}) {
-	return <FontAwesome size={30} style={{ marginBottom: -3 }} {...props} />
 }

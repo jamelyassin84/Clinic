@@ -1,14 +1,15 @@
 import React, { FC } from 'react'
 import { Text, View } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 type Props = {}
 
-const Screen: FC<Props> = (props) => {
+const AppScreen: FC<Props> = (props) => {
 	return (
-		<View>
-			<Text>Screen</Text>
-		</View>
+		<SafeAreaView>
+			<View>{props.children}</View>
+		</SafeAreaView>
 	)
 }
 
-export default Screen
+export default AppScreen
