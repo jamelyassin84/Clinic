@@ -1,8 +1,3 @@
-/**
- * If you are not familiar with React Navigation, refer to the "Fundamentals" guide:
- * https://reactnavigation.org/docs/getting-started
- *
- */
 import { FontAwesome } from '@expo/vector-icons'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import {
@@ -17,10 +12,12 @@ import BottomTabICon from '../components/BottomTabICon'
 
 import Colors from '../constants/Colors'
 import useColorScheme from '../hooks/useColorScheme'
+import _Appointments from '../modules/appointments/_Appointments'
+import _Home from '../modules/home/home_page/_Home'
+import _Promotions from '../modules/promotions/_Promotions'
+import _Settings from '../modules/settings/_Settings'
 import ModalScreen from '../screens/ModalScreen'
 import NotFoundScreen from '../screens/NotFoundScreen'
-import TabOneScreen from '../screens/TabOneScreen'
-import TabTwoScreen from '../screens/TabTwoScreen'
 import { RootStackParamList, RootTabParamList } from '../types'
 import { resolveHomeIcon } from './HomeIcons'
 
@@ -82,7 +79,7 @@ function BottomTabNavigator() {
 			}}>
 			<BottomTab.Screen
 				name="Home"
-				component={TabOneScreen}
+				component={_Home}
 				options={{
 					title: 'Home',
 					tabBarIcon: ({ color }) => (
@@ -95,15 +92,18 @@ function BottomTabNavigator() {
 					tabBarLabelStyle: {
 						transform: [
 							{
-								translateY: Platform.OS === 'android' ? -16 : 0,
+								translateY: Platform.OS === 'android' ? -28 : 0,
 							},
 						],
+					},
+					tabBarIconStyle: {
+						marginTop: -20,
 					},
 				}}
 			/>
 			<BottomTab.Screen
 				name="Appointments"
-				component={TabTwoScreen}
+				component={_Appointments}
 				options={{
 					title: 'Appointments',
 					tabBarIcon: ({ color }) => (
@@ -116,15 +116,18 @@ function BottomTabNavigator() {
 					tabBarLabelStyle: {
 						transform: [
 							{
-								translateY: Platform.OS === 'android' ? -16 : 0,
+								translateY: Platform.OS === 'android' ? -28 : 0,
 							},
 						],
+					},
+					tabBarIconStyle: {
+						marginTop: -20,
 					},
 				}}
 			/>
 			<BottomTab.Screen
 				name="Settings"
-				component={TabTwoScreen}
+				component={_Settings}
 				options={{
 					title: 'Settings',
 					tabBarIcon: ({ color }) => (
@@ -137,15 +140,18 @@ function BottomTabNavigator() {
 					tabBarLabelStyle: {
 						transform: [
 							{
-								translateY: Platform.OS === 'android' ? -16 : 0,
+								translateY: Platform.OS === 'android' ? -28 : 0,
 							},
 						],
+					},
+					tabBarIconStyle: {
+						marginTop: -20,
 					},
 				}}
 			/>
 			<BottomTab.Screen
 				name="Promotions"
-				component={TabTwoScreen}
+				component={_Promotions}
 				options={{
 					title: 'Promotions',
 					tabBarIcon: ({ color }) => (
@@ -158,9 +164,12 @@ function BottomTabNavigator() {
 					tabBarLabelStyle: {
 						transform: [
 							{
-								translateY: Platform.OS === 'android' ? -16 : 0,
+								translateY: Platform.OS === 'android' ? -28 : 0,
 							},
 						],
+					},
+					tabBarIconStyle: {
+						marginTop: -20,
 					},
 				}}
 			/>
