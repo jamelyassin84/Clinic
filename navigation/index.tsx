@@ -1,4 +1,3 @@
-import { FontAwesome } from '@expo/vector-icons'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import {
 	NavigationContainer,
@@ -45,6 +44,11 @@ function RootNavigator() {
 	return (
 		<Stack.Navigator>
 			<Stack.Screen
+				name="Root"
+				component={BottomTabNavigator}
+				options={{ headerShown: false }}
+			/>
+			<Stack.Screen
 				name="SignIn"
 				component={_SignInScreen}
 				options={{ headerShown: false }}
@@ -64,11 +68,7 @@ function RootNavigator() {
 				component={SetLocation}
 				options={{ headerShown: false }}
 			/>
-			<Stack.Screen
-				name="Root"
-				component={BottomTabNavigator}
-				options={{ headerShown: false }}
-			/>
+
 			<Stack.Group screenOptions={{ presentation: 'modal' }}>
 				<Stack.Screen name="Modal" component={ModalScreen} />
 			</Stack.Group>

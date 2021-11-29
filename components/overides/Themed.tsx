@@ -37,7 +37,7 @@ export function BoldText(props: TextProps) {
 
 	return (
 		<DefaultText
-			style={[{ color }, style, { fontWeight: 'bold' }]}
+			style={[{ color }, style, { fontFamily: 'Avenir Heavy' }]}
 			{...otherProps}
 		/>
 	)
@@ -47,7 +47,24 @@ export function Text(props: TextProps) {
 	const { style, lightColor, darkColor, ...otherProps } = props
 	const color = useThemeColor({ light: lightColor, dark: darkColor }, 'text')
 
-	return <DefaultText style={[{ color }, style]} {...otherProps} />
+	return (
+		<DefaultText
+			style={[{ color }, style, { fontFamily: 'Avenir' }]}
+			{...otherProps}
+		/>
+	)
+}
+
+export function SFText(props: TextProps) {
+	const { style, lightColor, darkColor, ...otherProps } = props
+	const color = useThemeColor({ light: lightColor, dark: darkColor }, 'text')
+
+	return (
+		<DefaultText
+			style={[{ color }, style, { fontFamily: 'SF Normal' }]}
+			{...otherProps}
+		/>
+	)
 }
 
 export function View(props: ViewProps) {

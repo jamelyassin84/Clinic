@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import { Image } from 'react-native'
 import { BoldText } from '../../../components/overides/Themed'
 import AppScreen from '../../../components/Screen'
 
