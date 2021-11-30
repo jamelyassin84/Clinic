@@ -9,6 +9,15 @@ type Props = {}
 const _SignInScreen: FC<Props> = (props) => {
 	return (
 		<AppScreen>
+			<Image
+				style={{
+					height: 124,
+					resizeMode: 'contain',
+					position: 'absolute',
+					top: '20%',
+				}}
+				source={require('../../../assets/app/app/SignIn/1.png')}
+			/>
 			<BoldText
 				style={{
 					textAlign: 'center',
@@ -16,7 +25,7 @@ const _SignInScreen: FC<Props> = (props) => {
 					width: 212,
 					alignSelf: 'center',
 					position: 'absolute',
-					top: '40%',
+					top: '35%',
 				}}>
 				Clinic appointments made easily
 			</BoldText>

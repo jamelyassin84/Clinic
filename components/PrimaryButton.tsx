@@ -1,13 +1,18 @@
 import React, { FC } from 'react'
 import { Text, View } from 'react-native'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 
-type Props = {}
+type Props = {
+	name: string
+	callback: Function
+}
 
 const PrimaryButton: FC<Props> = (props) => {
 	return (
-		<View>
-			<Text>PrimaryButton</Text>
-		</View>
+		<TouchableOpacity
+			onPress={() => {
+				props.callback()
+			}}></TouchableOpacity>
 	)
 }
 
