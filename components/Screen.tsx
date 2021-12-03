@@ -9,12 +9,15 @@ type Props = {}
 const AppScreen: FC<Props> = (props) => {
 	const colorScheme = useColorScheme()
 	return (
-		<SafeAreaView>
+		<SafeAreaView
+			style={{
+				backgroundColor: Colors[colorScheme].background,
+			}}>
 			<View
 				style={{
 					height: Dimensions.get('screen').height,
 					width: Dimensions.get('screen').width,
-					paddingTop: Platform.OS === 'ios' ? 40 : 20,
+					paddingTop: 10,
 					backgroundColor: Colors[colorScheme].background,
 				}}>
 				{props.children}
