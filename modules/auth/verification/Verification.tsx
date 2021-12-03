@@ -1,9 +1,10 @@
 import React, { FC } from 'react'
-import { View, Image } from 'react-native'
+import { View, Image, KeyboardAvoidingView } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import BackToTop from '../../../components/BacktoTop'
 import { BoldText, Text } from '../../../components/overrides/Themed'
 import AppScreen from '../../../components/Screen'
+import EnterMobileNumberForm from './EnterMobileNumberForm'
 
 type Props = {}
 
@@ -40,6 +41,8 @@ const Verification: FC<Props> = (props) => {
 				}}>
 				We will send a text to verify your number. No fees will apply.
 			</Text>
+
+			<EnterMobileNumberForm />
 
 			<TouchableOpacity>
 				<Image
