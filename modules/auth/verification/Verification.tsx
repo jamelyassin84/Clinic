@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/core'
 import React, { FC } from 'react'
 import { View, Image, KeyboardAvoidingView } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
@@ -9,6 +10,8 @@ import EnterMobileNumberForm from './EnterMobileNumberForm'
 type Props = {}
 
 const Verification: FC<Props> = (props) => {
+	const navigation = useNavigation()
+
 	return (
 		<AppScreen>
 			<BackToTop />
@@ -44,7 +47,8 @@ const Verification: FC<Props> = (props) => {
 
 			<EnterMobileNumberForm />
 
-			<TouchableOpacity>
+			<TouchableOpacity
+				onPress={() => navigation.navigate('VerificationCode')}>
 				<Image
 					style={{
 						height: 50,
