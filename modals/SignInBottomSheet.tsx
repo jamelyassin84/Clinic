@@ -10,7 +10,7 @@ const SignInBottomSheet: FC<Props> = (props) => {
 	const bottomSheetRef = React.useRef<BottomSheet>(null)
 
 	// variables
-	const snapPoints = React.useMemo(() => ['25%', '40%'], [])
+	const snapPoints = React.useMemo(() => ['25%', '45%'], [])
 
 	// callbacks
 	const handleSheetChanges = React.useCallback((index: number) => {

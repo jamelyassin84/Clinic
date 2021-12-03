@@ -11,12 +11,14 @@ const _SignInScreen: FC<Props> = (props) => {
 		<AppScreen>
 			<Image
 				style={{
-					height: 124,
+					height: 171,
+					width: 208,
 					resizeMode: 'contain',
 					position: 'absolute',
-					top: '20%',
+					top: '15%',
+					alignSelf: 'center',
 				}}
-				source={require('../../../assets/app/SignIn/1.png')}
+				source={require('../../../assets/app/SignIn/sign-in.png')}
 			/>
 			<BoldText
 				style={{
@@ -25,7 +27,7 @@ const _SignInScreen: FC<Props> = (props) => {
 					width: 212,
 					alignSelf: 'center',
 					position: 'absolute',
-					top: '35%',
+					top: '40%',
 				}}>
 				Clinic appointments made easily
 			</BoldText>

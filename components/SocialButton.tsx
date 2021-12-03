@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import { Image, View } from 'react-native'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 
 type Props = {
 	image: string | any
@@ -8,9 +9,9 @@ type Props = {
 
 const SocialButton: FC<Props> = (props) => {
 	return (
-		<View>
+		<TouchableOpacity onPress={() => props.callback()}>
 			<Image style={{ height: 80, width: 120 }} source={props.image} />
-		</View>
+		</TouchableOpacity>
 	)
 }
 

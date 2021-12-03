@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
-import { Text, View } from 'react-native'
-import { BoldText } from '../../../components/overides/Themed'
+import { View } from 'react-native'
+import { BoldText, Text } from '../../../components/overides/Themed'
 import PrimaryButton from '../../../components/PrimaryButton'
 import SocialButton from '../../../components/SocialButton'
 
@@ -8,21 +8,20 @@ type Props = {}
 
 const SignInBottomModal: FC<Props> = (props) => {
 	const socials = [
-		// require('../../../assets/app/SignIn/g.png'),
-		// require('../../../assets/app/SignIn/f.png'),
-		// require('../../../assets/app/SignIn/a.png'),
+		require('../../../assets/app/SignIn/g.png'),
+		require('../../../assets/app/SignIn/f.png'),
+		require('../../../assets/app/SignIn/a.png'),
 	]
 	return (
 		<View>
-			<BoldText
+			<Text
 				style={{
-					marginTop: 40,
+					margin: 30,
 					fontSize: 20,
-					width: '100%',
-					textAlign: 'center',
+					alignSelf: 'center',
 				}}>
 				Sign in with
-			</BoldText>
+			</Text>
 
 			<View
 				style={{
@@ -32,13 +31,13 @@ const SignInBottomModal: FC<Props> = (props) => {
 					alignItems: 'center',
 					justifyContent: 'center',
 				}}>
-				{/* {socials.map((image: any, index: number) => (
+				{socials.map((image: any, index: number) => (
 					<SocialButton
 						key={index}
 						image={image}
 						callback={() => {}}
 					/>
-				))} */}
+				))}
 			</View>
 		</View>
 	)
