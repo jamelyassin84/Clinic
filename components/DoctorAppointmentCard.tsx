@@ -36,7 +36,7 @@ const DoctorAppointmentCard: FC<Props> = (props) => {
 							style={{
 								height: 50,
 								width: 50,
-								resizeMode: 'contain',
+								resizeMode: 'stretch',
 								borderRadius: 10,
 							}}
 							source={props.image}
