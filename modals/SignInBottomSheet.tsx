@@ -6,15 +6,12 @@ import SignInBottomModal from '../modules/auth/sign-in/SignInBottomModal'
 type Props = {}
 
 const SignInBottomSheet: FC<Props> = (props) => {
-	// ref
 	const bottomSheetRef = React.useRef<BottomSheet>(null)
 
-	// variables
 	const snapPoints = React.useMemo(() => ['25%', '45%'], [])
 
-	// callbacks
 	const handleSheetChanges = React.useCallback((index: number) => {
-		console.log('handleSheetChanges', index)
+		// console.log('handleSheetChanges', index)
 	}, [])
 
 	return (
@@ -23,14 +20,14 @@ const SignInBottomSheet: FC<Props> = (props) => {
 				display: 'none',
 			}}
 			style={{
-				shadowColor: 'lightgray',
+				shadowColor: 'gray',
 				shadowOffset: {
-					width: 1,
-					height: -4,
+					width: 0,
+					height: 0,
 				},
 				shadowOpacity: 0.2,
-				shadowRadius: 15.46,
-				elevation: 19,
+				shadowRadius: 5.46,
+				// elevation: 19,
 				width: '100%',
 				alignItems: 'center',
 				borderTopLeftRadius: 50,

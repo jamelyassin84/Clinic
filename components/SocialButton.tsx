@@ -10,7 +10,7 @@ type Props = {
 const SocialButton: FC<Props> = (props) => {
 	return (
 		<TouchableOpacity onPress={() => props.callback()}>
-			<Image style={{ height: 80, width: 120 }} source={props.image} />
+			<Image style={{ height: 70, width: 110 }} source={props.image} />
 		</TouchableOpacity>
 	)
 }
