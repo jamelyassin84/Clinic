@@ -21,7 +21,9 @@ const NearbyClinics: FC<Props> = (props) => {
 				<BoldText style={{ fontSize: 15, flex: 1 }}>
 					Nearby Clinics
 				</BoldText>
-				<TouchableOpacity style={{ alignSelf: 'flex-end' }}>
+				<TouchableOpacity
+					style={{ alignSelf: 'flex-end' }}
+					onPress={() => navigation.navigate('_NearbyClinics')}>
 					<Text style={{ color: Colors[colorScheme].tint }}>
 						show all
 					</Text>

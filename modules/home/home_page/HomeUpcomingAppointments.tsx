@@ -19,12 +19,17 @@ const HomeUpcomingAppointments: FC<Props> = (props) => {
 				<BoldText style={{ fontSize: 15, flex: 1 }}>
 					Upcoming appointments
 				</BoldText>
-				<TouchableOpacity style={{ alignSelf: 'flex-end' }}>
+				<TouchableOpacity
+					style={{ alignSelf: 'flex-end' }}
+					onPress={() =>
+						navigation.navigate('_UpcomingAppointments')
+					}>
 					<Text style={{ color: Colors[colorScheme].tint }}>
 						show all
 					</Text>
 				</TouchableOpacity>
 			</View>
+
 			<DoctorAppointmentCard
 				doctor="Dr. Hanadi Yassin"
 				position="Cardiologist"

@@ -23,6 +23,9 @@ export type RootStackParamList = {
 	Verification: undefined
 	VerificationCode: undefined
 	SetLocation: undefined
+	_NearbyClinics: undefined
+	_ClinicDetails: undefined
+	_UpcomingAppointments: undefined
 }
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> =
