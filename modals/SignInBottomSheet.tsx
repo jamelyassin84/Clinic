@@ -30,9 +30,10 @@ const SignInBottomSheet: FC<Props> = (props) => {
 				// elevation: 19,
 				width: '100%',
 				alignItems: 'center',
-				borderTopLeftRadius: 50,
-				borderTopRightRadius: 50,
-				backgroundColor: '#fff',
+				borderWidth: 5,
+				borderColor: '#F2F4F6',
+				borderTopLeftRadius: 20,
+				borderTopRightRadius: 20,
 			}}
 			ref={bottomSheetRef}
 			index={1}
