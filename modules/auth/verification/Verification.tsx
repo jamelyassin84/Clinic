@@ -1,7 +1,8 @@
 import React, { FC } from 'react'
 import { View, Image } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
-import { BoldText, Text } from '../../../components/overides/Themed'
+import BackToTop from '../../../components/BacktoTop'
+import { BoldText, Text } from '../../../components/overrides/Themed'
 import AppScreen from '../../../components/Screen'
 
 type Props = {}
@@ -9,8 +10,10 @@ type Props = {}
 const Verification: FC<Props> = (props) => {
 	return (
 		<AppScreen>
+			<BackToTop />
 			<Image
 				style={{
+					marginTop: 104,
 					height: 156,
 					resizeMode: 'contain',
 					alignSelf: 'center',

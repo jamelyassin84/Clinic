@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { Image } from 'react-native'
-import { BoldText } from '../../../components/overides/Themed'
+import { BoldText } from '../../../components/overrides/Themed'
 import AppScreen from '../../../components/Screen'
 import SignInBottomSheet from '../../../modals/SignInBottomSheet'
 

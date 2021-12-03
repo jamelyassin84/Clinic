@@ -2,7 +2,7 @@ import { useNavigation } from '@react-navigation/core'
 import React, { FC } from 'react'
 import { View, Image } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
-import { Text } from '../../../components/overides/Themed'
+import { Text } from '../../../components/overrides/Themed'
 import SocialButton from '../../../components/SocialButton'
 
 type Props = {}

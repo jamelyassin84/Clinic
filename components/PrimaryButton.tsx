@@ -3,7 +3,7 @@ import { View } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import Colors from '../constants/Colors'
 import useColorScheme from '../hooks/useColorScheme'
-import { BoldText } from './overides/Themed'
+import { BoldText } from './overrides/Themed'
 
 type Props = {
 	name: string
