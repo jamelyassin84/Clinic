@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/core'
 import React, { FC } from 'react'
 import { View, Image } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
@@ -7,6 +8,8 @@ import SocialButton from '../../../components/SocialButton'
 type Props = {}
 
 const SignInBottomModal: FC<Props> = (props) => {
+	const navigation = useNavigation()
+
 	const socials = [
 		require('../../../assets/app/SignIn/g.png'),
 		require('../../../assets/app/SignIn/f.png'),
@@ -39,7 +42,8 @@ const SignInBottomModal: FC<Props> = (props) => {
 					/>
 				))}
 			</View>
-			<TouchableOpacity onPress={() => {}}>
+			<TouchableOpacity
+				onPress={() => navigation.navigate('Verification')}>
 				<Image
 					style={{
 						height: 105,
