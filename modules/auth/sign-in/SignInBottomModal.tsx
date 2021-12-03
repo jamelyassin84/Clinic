@@ -8,9 +8,9 @@ type Props = {}
 
 const SignInBottomModal: FC<Props> = (props) => {
 	const socials = [
-		require('../../../assets/app/app/SignIn/g.png'),
-		require('../../../assets/app/app/SignIn/f.png'),
-		require('../../../assets/app/app/SignIn/a.png'),
+		// require('../../../assets/app/SignIn/g.png'),
+		// require('../../../assets/app/SignIn/f.png'),
+		// require('../../../assets/app/SignIn/a.png'),
 	]
 	return (
 		<View>
@@ -18,26 +18,27 @@ const SignInBottomModal: FC<Props> = (props) => {
 				style={{
 					marginTop: 40,
 					fontSize: 20,
+					width: '100%',
+					textAlign: 'center',
 				}}>
 				Sign in with
 			</BoldText>
 
 			<View
 				style={{
-					flex: 1,
 					flexDirection: 'row',
 					marginHorizontal: 24,
 					alignContent: 'center',
 					alignItems: 'center',
 					justifyContent: 'center',
 				}}>
-				{socials.map((image: any, index: number) => (
+				{/* {socials.map((image: any, index: number) => (
 					<SocialButton
 						key={index}
 						image={image}
 						callback={() => {}}
 					/>
-				))}
+				))} */}
 			</View>
 		</View>
 	)

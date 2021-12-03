@@ -16,7 +16,7 @@ const _SignInScreen: FC<Props> = (props) => {
 					position: 'absolute',
 					top: '20%',
 				}}
-				source={require('../../../assets/app/app/SignIn/1.png')}
+				source={require('../../../assets/app/SignIn/1.png')}
 			/>
 			<BoldText
 				style={{

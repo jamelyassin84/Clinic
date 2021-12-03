@@ -23,7 +23,7 @@ const SignInBottomSheet: FC<Props> = (props) => {
 				display: 'none',
 			}}
 			style={{
-				shadowColor: 'lighthray',
+				shadowColor: 'lightgray',
 				shadowOffset: {
 					width: 1,
 					height: -4,
