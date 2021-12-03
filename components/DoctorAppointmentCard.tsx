@@ -22,6 +22,7 @@ const DoctorAppointmentCard: FC<Props> = (props) => {
 						backgroundColor: '#F2F4F7',
 						borderTopLeftRadius: 15,
 						borderTopRightRadius: 15,
+						alignItems: 'center',
 					}}>
 					<View
 						style={{
@@ -46,9 +47,25 @@ const DoctorAppointmentCard: FC<Props> = (props) => {
 						<Text style={{ color: 'gray' }}>{props.position}</Text>
 					</View>
 				</View>
-				<View style={{ paddingVertical: 16, paddingHorizontal: 25 }}>
-					<Text>{props.date}</Text>
-					<Text>{props.time}</Text>
+				<View
+					style={{
+						paddingVertical: 16,
+						paddingHorizontal: 25,
+						flexDirection: 'row',
+						alignItems: 'center',
+						justifyContent: 'center',
+					}}>
+					<BoldText style={{ color: '#594A88', fontSize: 15 }}>
+						{props.date}
+					</BoldText>
+					<BoldText
+						style={{
+							marginLeft: 20,
+							color: '#594A88',
+							fontSize: 15,
+						}}>
+						{props.time}
+					</BoldText>
 				</View>
 			</TouchableOpacity>
 		</RoundedCard>
