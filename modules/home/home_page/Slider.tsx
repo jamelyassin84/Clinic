@@ -1,12 +1,18 @@
 import React, { FC } from 'react'
-import { Text, View } from 'react-native'
+import { Image, View } from 'react-native'
 
 type Props = {}
 
 const Slider: FC<Props> = (props) => {
 	return (
 		<View>
-			<Text>Slider</Text>
+			<Image
+				style={{
+					height: 160,
+					resizeMode: 'contain',
+				}}
+				source={require('../../../assets/app/Home/banner.png')}
+			/>
 		</View>
 	)
 }
