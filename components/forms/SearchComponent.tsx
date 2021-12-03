@@ -26,6 +26,8 @@ const SearchComponent: FC<Props> = (props) => {
 				},
 				shadowOpacity: 0.2,
 				shadowRadius: 5.46,
+				position: 'relative',
+				zIndex: 9,
 				// elevation: 19,
 			}}>
 			<View

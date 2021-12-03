@@ -4,6 +4,8 @@ import SearchComponent from '../../../components/forms/SearchComponent'
 import AppScreen from '../../../components/Screen'
 import ScrollVIewWithRefresh from '../../../components/ScrollVIewWithRefresh'
 import HomeTopBar from './HomeTopBar'
+import HomeUpcomingAppointments from './HomeUpcomingAppointments'
+import NearbyClinics from './NearbyClinics'
 import Slider from './Slider'
 
 type Props = {}
@@ -16,6 +18,8 @@ const _Home: FC<Props> = (props) => {
 				<View style={{ marginTop: 12 }}></View>
 				<Slider />
 				<SearchComponent />
+				<HomeUpcomingAppointments />
+				<NearbyClinics />
 			</ScrollVIewWithRefresh>
 		</AppScreen>
 	)

@@ -3,12 +3,18 @@ import { Text, View } from 'react-native'
 
 type Props = {}
 
-const Login: FC<Props> = (props) => {
+const Card: FC<Props> = (props) => {
 	return (
-		<View>
-			<Text>Login</Text>
+		<View
+			style={{
+				width: '100%',
+				borderBottomColor: '#F6F7F8',
+				borderBottomWidth: 10,
+				padding: 20,
+			}}>
+			{props.children}
 		</View>
 	)
 }
 
-export default Login
+export default Card
