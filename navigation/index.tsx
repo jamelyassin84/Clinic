@@ -114,7 +114,7 @@ function BottomTabNavigator() {
 						],
 					},
 					tabBarIconStyle: {
-						marginTop: -20,
+						marginTop: Platform.OS === 'android' ? -20 : 10,
 					},
 				}}
 			/>
@@ -138,7 +138,7 @@ function BottomTabNavigator() {
 						],
 					},
 					tabBarIconStyle: {
-						marginTop: -20,
+						marginTop: Platform.OS === 'android' ? -20 : 10,
 					},
 				}}
 			/>
@@ -162,7 +162,7 @@ function BottomTabNavigator() {
 						],
 					},
 					tabBarIconStyle: {
-						marginTop: -20,
+						marginTop: Platform.OS === 'android' ? -20 : 10,
 					},
 				}}
 			/>
@@ -186,7 +186,7 @@ function BottomTabNavigator() {
 						],
 					},
 					tabBarIconStyle: {
-						marginTop: -20,
+						marginTop: Platform.OS === 'android' ? -20 : 10,
 					},
 				}}
 			/>
