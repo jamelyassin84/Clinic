@@ -17,7 +17,6 @@ import _SignInScreen from '../modules/auth/sign-in/_SignInScreen'
 import Verification from '../modules/auth/verification/Verification'
 import VerificationCode from '../modules/auth/verification_code/VerificationCode'
 import _NearbyClinics from '../modules/home/clinics/_NearbyClinics'
-import _ClinicDetails from '../modules/home/upcoming_appointments/_UpcomingAppointments'
 import _Home from '../modules/home/home_page/_Home'
 import _Promotions from '../modules/promotions/_Promotions'
 import _Settings from '../modules/settings/_Settings'
@@ -25,6 +24,8 @@ import ModalScreen from '../screens/ModalScreen'
 import { RootStackParamList, RootTabParamList } from '../types'
 import { resolveHomeIcon } from './HomeIcons'
 import _UpcomingAppointments from '../modules/home/upcoming_appointments/_UpcomingAppointments'
+import _ClinicDetails from '../modules/home/clinic_details/_ClinicDetails'
+import _AppointmentDetails from '../modules/home/appointment_details/_AppointmentDetails'
 
 export default function Navigation({
 	colorScheme,
@@ -81,6 +82,11 @@ function RootNavigator() {
 			<Stack.Screen
 				name="_UpcomingAppointments"
 				component={_UpcomingAppointments}
+				options={{ headerShown: false }}
+			/>
+			<Stack.Screen
+				name="_AppointmentDetails"
+				component={_AppointmentDetails}
 				options={{ headerShown: false }}
 			/>
 

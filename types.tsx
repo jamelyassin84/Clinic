@@ -26,6 +26,7 @@ export type RootStackParamList = {
 	_NearbyClinics: undefined
 	_ClinicDetails: undefined
 	_UpcomingAppointments: undefined
+	_AppointmentDetails: undefined
 }
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> =

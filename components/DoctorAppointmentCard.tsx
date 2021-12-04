@@ -9,12 +9,13 @@ type Props = {
 	image: any
 	date: any
 	time: any
+	callback: Function
 }
 
 const DoctorAppointmentCard: FC<Props> = (props) => {
 	return (
 		<RoundedCard>
-			<TouchableOpacity>
+			<TouchableOpacity onPress={() => props.callback()}>
 				<View
 					style={{
 						flexDirection: 'row',
@@ -31,6 +32,16 @@ const DoctorAppointmentCard: FC<Props> = (props) => {
 							borderColor: 'white',
 							marginLeft: 15,
 							height: 50,
+							shadowColor: 'gray',
+							shadowOffset: {
+								width: 0,
+								height: 0,
+							},
+							shadowOpacity: 0.2,
+							shadowRadius: 5.46,
+							position: 'relative',
+							zIndex: 9,
+							// elevation: 19,
 						}}>
 						<Image
 							style={{
