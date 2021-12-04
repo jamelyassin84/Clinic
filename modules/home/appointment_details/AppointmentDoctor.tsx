@@ -33,7 +33,7 @@ const AppointmentDoctor: FC<Props> = (props) => {
 						borderRadius: 10,
 						borderColor: 'white',
 						marginLeft: 34,
-						height: 80,
+						height: 83,
 						shadowColor: 'gray',
 						shadowOffset: {
 							width: 0,
@@ -47,8 +47,8 @@ const AppointmentDoctor: FC<Props> = (props) => {
 					}}>
 					<Image
 						style={{
-							height: 80,
-							width: 80,
+							height: 77,
+							width: 77,
 							resizeMode: 'stretch',
 							borderRadius: 10,
 						}}

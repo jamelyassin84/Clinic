@@ -5,6 +5,7 @@ import Card from '../../../components/Card'
 import DoctorAppointmentCard from '../../../components/DoctorAppointmentCard'
 import ScreenWithBack from '../../../components/ScreenWithBack'
 import AppointmentDoctor from './AppointmentDoctor'
+import AppointmentLocation from './AppointmentLocation'
 
 type Props = {}
 
@@ -23,7 +24,7 @@ const _AppointmentDetails: FC<Props> = (props) => {
 				time="10:30 AM - 11:00 AM"
 				image={require('../../../assets/app/Home/doctor.png')}
 			/>
-			<View style={{ padding: 16 }}></View>
+			<AppointmentLocation />
 		</ScreenWithBack>
 	)
 }
