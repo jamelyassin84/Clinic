@@ -4,7 +4,9 @@ import { TextInput, TouchableOpacity } from 'react-native-gesture-handler'
 import Colors from '../../constants/Colors'
 import useColorScheme from '../../hooks/useColorScheme'
 
-type Props = {}
+type Props = {
+	focus: Function
+}
 
 const SearchComponent: FC<Props> = (props) => {
 	const colorScheme = useColorScheme()
@@ -65,6 +67,8 @@ const SearchComponent: FC<Props> = (props) => {
 					}}
 					keyboardType="default"
 					placeholderTextColor="#6F7D8F"
+					onFocus={() => props.focus(true)}
+					onBlur={() => props.focus(false)}
 				/>
 			</View>
 		</View>
