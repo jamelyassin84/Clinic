@@ -22,7 +22,9 @@ const VerificationCode: FC<Props> = (props) => {
 				style={{
 					fontSize: 20,
 					alignSelf: 'center',
+					marginTop: 39,
 					textAlign: 'center',
+					marginBottom: 12,
 				}}>
 				Enter verification code
 			</BoldText>
@@ -30,10 +32,10 @@ const VerificationCode: FC<Props> = (props) => {
 				style={{
 					color: '#6F7D8F',
 					alignSelf: 'center',
-					paddingTop: 12,
 					paddingHorizontal: 60,
 					textAlign: 'center',
 					fontSize: 15,
+					marginBottom: 64,
 				}}>
 				We sent you a verification code via SMS.
 			</Text>
@@ -54,7 +56,7 @@ const VerificationCode: FC<Props> = (props) => {
 					flexDirection: 'row',
 					alignSelf: 'center',
 					position: 'absolute',
-					top: '80%',
+					top: '50%',
 				}}>
 				<Text
 					style={{
