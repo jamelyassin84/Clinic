@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/core'
 import React, { FC } from 'react'
 import { Image, View, TouchableOpacity } from 'react-native'
 import { BoldText, Text } from '../../../components/overrides/Themed'
@@ -17,9 +18,11 @@ type Props = {
 
 const ClinicsInMaps: FC<Props> = (props) => {
 	const colorScheme = useColorScheme()
+	const navigation = useNavigation()
 
 	return (
 		<TouchableOpacity
+			onPress={() => navigation.navigate('_ClinicDetails')}
 			style={{
 				borderRadius: 10,
 				backgroundColor: Colors[colorScheme].background,
