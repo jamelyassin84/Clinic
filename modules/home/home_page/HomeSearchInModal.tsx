@@ -1,14 +1,20 @@
 import React, { FC } from 'react'
 import { Image, Text, View } from 'react-native'
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler'
-import Colors from '../../constants/Colors'
-import useColorScheme from '../../hooks/useColorScheme'
+import Colors from '../../../constants/Colors'
+import useColorScheme from '../../../hooks/useColorScheme'
 
 type Props = {
-	focus: Function
+	blurModal: Function
 }
 
-const SearchComponent: FC<Props> = (props) => {
+const HomeSearchInModal: FC<Props> = (props) => {
+	let input: any = React.useRef(null)
+
+	React.useEffect(() => {
+		input.current?.focus()
+	}, [])
+
 	const colorScheme = useColorScheme()
 	return (
 		<View
@@ -17,9 +23,7 @@ const SearchComponent: FC<Props> = (props) => {
 				borderWidth: 1,
 				borderColor: '#E6ECF2',
 				borderRadius: 10,
-				marginHorizontal: 25,
 				flexDirection: 'row',
-				marginTop: -25,
 				backgroundColor: Colors[colorScheme].background,
 				shadowColor: 'gray',
 				shadowOffset: {
@@ -28,9 +32,10 @@ const SearchComponent: FC<Props> = (props) => {
 				},
 				shadowOpacity: 0.2,
 				shadowRadius: 5.46,
-				position: 'relative',
-				zIndex: 9,
+
 				// elevation: 19,
+				marginTop: 20,
+				marginBottom: 42,
 			}}>
 			<View
 				style={{
@@ -52,7 +57,7 @@ const SearchComponent: FC<Props> = (props) => {
 							width: 24,
 							margin: 12,
 						}}
-						source={require('../../assets/app/Home/search-icon.png')}
+						source={require('../../../assets/app/Home/search-icon.png')}
 					/>
 				</TouchableOpacity>
 				<TextInput
@@ -67,13 +72,12 @@ const SearchComponent: FC<Props> = (props) => {
 					}}
 					keyboardType="default"
 					placeholderTextColor="#6F7D8F"
-					onFocus={() => {
-						props.focus(true)
-					}}
+					ref={input}
+					onBlur={() => props.blurModal()}
 				/>
 			</View>
 		</View>
 	)
 }
 
-export default SearchComponent
+export default HomeSearchInModal

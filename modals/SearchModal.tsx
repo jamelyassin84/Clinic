@@ -1,11 +1,10 @@
 import React, { FC } from 'react'
-import { Text, View } from 'react-native'
 import BottomSheet from '@gorhom/bottom-sheet'
-import SignInBottomModal from '../modules/auth/sign-in/SignInBottomModal'
 import HomeSearchComponent from '../modules/home/home_page/HomeSearchComponent'
 
 type Props = {
-	focus: Boolean
+	focus: boolean
+	onBlur: Function
 }
 
 const SearchModal: FC<Props> = (props) => {
@@ -13,9 +12,7 @@ const SearchModal: FC<Props> = (props) => {
 
 	const snapPoints = React.useMemo(() => ['25%', '95%'], [])
 
-	const handleSheetChanges = React.useCallback((index: number) => {
-		// console.log('handleSheetChanges', index)
-	}, [])
+	const [focus, setFocus] = React.useState(false)
 
 	React.useEffect(() => {
 		if (props.focus === false) {
@@ -23,7 +20,7 @@ const SearchModal: FC<Props> = (props) => {
 			return
 		}
 		searchRef.current?.snapToIndex(1)
-	}, [props.focus])
+	}, [focus])
 
 	return (
 		<BottomSheet
@@ -34,11 +31,19 @@ const SearchModal: FC<Props> = (props) => {
 				width: '100%',
 				padding: 22,
 			}}
+			backgroundStyle={{
+				borderRadius: 0,
+				borderTopWidth: 1,
+				borderTopColor: '#F2F5F8',
+			}}
 			ref={searchRef}
 			index={1}
-			snapPoints={snapPoints}
-			onChange={handleSheetChanges}>
-			<HomeSearchComponent />
+			snapPoints={snapPoints}>
+			<HomeSearchComponent
+				blurModal={() => {
+					searchRef.current?.close()
+				}}
+			/>
 		</BottomSheet>
 	)
 }

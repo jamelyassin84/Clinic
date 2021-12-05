@@ -20,11 +20,21 @@ const _Home: FC<Props> = (props) => {
 			<ScrollVIewWithRefresh onRefresh={() => {}} loading={false}>
 				<View style={{ marginTop: 12 }}></View>
 				<Slider />
-				<SearchComponent focus={(value: boolean) => setFocus(value)} />
+				<SearchComponent
+					focus={(value: boolean) => {
+						setFocus(value)
+					}}
+				/>
 				<HomeUpcomingAppointments />
 				<NearbyClinics />
 			</ScrollVIewWithRefresh>
-			<SearchModal focus={focus} />
+			<SearchModal
+				focus={focus}
+				onBlur={() => {
+					setFocus(false)
+					alert('ARI')
+				}}
+			/>
 		</AppScreen>
 	)
 }

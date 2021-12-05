@@ -2,8 +2,11 @@ import React, { FC } from 'react'
 import { Text, View } from 'react-native'
 import { BoldText } from '../../../components/overrides/Themed'
 import SearchBadges from '../../../components/SearchBadges'
+import HomeSearchInModal from './HomeSearchInModal'
 
-type Props = {}
+type Props = {
+	blurModal: Function
+}
 
 const HomeSearchComponent: FC<Props> = (props) => {
 	const badges: string[] = [
@@ -14,6 +17,8 @@ const HomeSearchComponent: FC<Props> = (props) => {
 	]
 	return (
 		<View>
+			<HomeSearchInModal blurModal={() => props.blurModal()} />
+
 			<BoldText style={{ color: '#0A2440', fontSize: 16 }}>
 				Popular Searches
 			</BoldText>
