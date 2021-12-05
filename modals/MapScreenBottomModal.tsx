@@ -10,7 +10,7 @@ type Props = {}
 const MapScreenBottomModal: FC<Props> = (props) => {
 	const bottomSheetRef = React.useRef<BottomSheet>(null)
 
-	const snapPoints = React.useMemo(() => ['65%', '95%'], [])
+	const snapPoints = React.useMemo(() => ['15%', '65%', '95%'], [])
 
 	const handleSheetChanges = React.useCallback((index: number) => {
 		// console.log('handleSheetChanges', index)
