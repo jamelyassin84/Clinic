@@ -12,7 +12,7 @@ import Slider from './Slider'
 type Props = {}
 
 const _Home: FC<Props> = (props) => {
-	const [focus, setFocus] = React.useState(false)
+	const [focus, setFocus] = React.useState<boolean>(false)
 
 	return (
 		<AppScreen>
@@ -32,7 +32,6 @@ const _Home: FC<Props> = (props) => {
 				focus={focus}
 				onBlur={() => {
 					setFocus(false)
-					alert('ARI')
 				}}
 			/>
 		</AppScreen>

@@ -70,6 +70,9 @@ const SearchComponent: FC<Props> = (props) => {
 					onFocus={() => {
 						props.focus(true)
 					}}
+					onBlur={() => {
+						props.focus(false)
+					}}
 				/>
 			</View>
 		</View>

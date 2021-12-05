@@ -36,9 +36,7 @@ const ScreenWithBack: FC<Props> = (props) => {
 					}}>
 					<TouchableOpacity
 						style={{ flex: 1 }}
-						onPress={() => {
-							navigation.goBack()
-						}}>
+						onPress={() => navigation.goBack()}>
 						<Image
 							style={{
 								height: 24,

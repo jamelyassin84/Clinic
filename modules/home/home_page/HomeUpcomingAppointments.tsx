@@ -31,6 +31,7 @@ const HomeUpcomingAppointments: FC<Props> = (props) => {
 			</View>
 
 			<DoctorAppointmentCard
+				callback={() => navigation.navigate('_AppointmentDetails')}
 				doctor="Dr. Hanadi Yassin"
 				position="Cardiologist"
 				date="Sun, 19 Apr 2021 "

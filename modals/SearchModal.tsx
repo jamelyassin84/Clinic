@@ -42,6 +42,7 @@ const SearchModal: FC<Props> = (props) => {
 			<HomeSearchComponent
 				blurModal={() => {
 					searchRef.current?.close()
+					props.onBlur()
 				}}
 			/>
 		</BottomSheet>

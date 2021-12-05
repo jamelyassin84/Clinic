@@ -34,7 +34,6 @@ const HomeSearchInModal: FC<Props> = (props) => {
 				shadowRadius: 5.46,
 
 				// elevation: 19,
-				marginTop: 20,
 				marginBottom: 42,
 			}}>
 			<View

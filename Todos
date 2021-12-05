@@ -1,0 +1,19 @@
+Screen
+
+    Sign-In
+        * Remove Continue as Guest
+        * Bottom sheet a little bit smaller 
+    Verify Mobile Number
+        * Focus
+        * Outline
+        * Drop Down
+        * Code & Number Format
+        * Disable / Enable Button
+    Enter Verification Code
+        * Focus on 1st
+        * Outline
+        * Switch to next form after typing
+        * Next Screen After Last Input
+    Clickable Set Location
+        * Next Screen After Last Input
+        

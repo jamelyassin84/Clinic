@@ -35,11 +35,13 @@ const NearbyClinics: FC<Props> = (props) => {
 				horizontal={true}
 				showsHorizontalScrollIndicator={false}>
 				<ClinicsCards
+					callback={() => navigation.navigate('_ClinicDetails')}
 					name="Danat Al Emarat Hospital"
 					type="Clinic"
 					image={require('../../../assets/app/Home/danat.png')}
 				/>
 				<ClinicsCards
+					callback={() => navigation.navigate('_ClinicDetails')}
 					name="Sheikh Khalifa"
 					type="Clinic"
 					image={require('../../../assets/app/Home/sheik.png')}

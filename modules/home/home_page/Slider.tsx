@@ -9,7 +9,8 @@ const Slider: FC<Props> = (props) => {
 			<Image
 				style={{
 					height: 160,
-					resizeMode: 'contain',
+					resizeMode: 'stretch',
+					width: '100%',
 				}}
 				source={require('../../../assets/app/Home/banner.png')}
 			/>

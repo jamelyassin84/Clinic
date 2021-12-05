@@ -23,7 +23,8 @@ const VerificationInput: FC<Props> = (props) => {
 					fontFamily: 'Avenir Heavy',
 					fontSize: 24,
 				}}
-				value="9"
+				value="3"
+				keyboardType="phone-pad"
 			/>
 		</View>
 	)

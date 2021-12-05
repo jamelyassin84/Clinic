@@ -7,12 +7,13 @@ type Props = {
 	image: any
 	name: string
 	type: any
+	callback: Function
 }
 
 const ClinicsCards: FC<Props> = (props) => {
 	return (
 		<ShadowRoundedCard margin={true}>
-			<TouchableOpacity>
+			<TouchableOpacity onPress={() => props.callback()}>
 				<View
 					style={{
 						borderTopLeftRadius: 10,
@@ -23,10 +24,10 @@ const ClinicsCards: FC<Props> = (props) => {
 						source={props.image}
 						style={{
 							maxHeight: 92,
-							resizeMode: 'cover',
+							resizeMode: 'stretch',
 							borderTopLeftRadius: 10,
 							borderTopRightRadius: 10,
-							maxWidth: 180,
+							maxWidth: 191,
 						}}
 					/>
 				</View>
