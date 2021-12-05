@@ -26,6 +26,7 @@ import { resolveHomeIcon } from './HomeIcons'
 import _UpcomingAppointments from '../modules/home/upcoming_appointments/_UpcomingAppointments'
 import _ClinicDetails from '../modules/home/clinic_details/_ClinicDetails'
 import _AppointmentDetails from '../modules/home/appointment_details/_AppointmentDetails'
+import _MapScreen from '../modules/home/map_screen/_MapScreen'
 
 export default function Navigation({
 	colorScheme,
@@ -87,6 +88,12 @@ function RootNavigator() {
 			<Stack.Screen
 				name="_AppointmentDetails"
 				component={_AppointmentDetails}
+				options={{ headerShown: false }}
+			/>
+
+			<Stack.Screen
+				name="_MapScreen"
+				component={_MapScreen}
 				options={{ headerShown: false }}
 			/>
 

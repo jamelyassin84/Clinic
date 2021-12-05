@@ -4,6 +4,7 @@ import { Text } from './overrides/Themed'
 
 type Props = {
 	name: string
+	callback: Function
 }
 
 const SearchBadges: FC<Props> = (props) => {
@@ -16,7 +17,7 @@ const SearchBadges: FC<Props> = (props) => {
 				borderRadius: 15,
 				marginTop: 16,
 			}}
-			onPress={() => {}}>
+			onPress={() => props.callback()}>
 			<Text style={{ fontSize: 14 }}>{props.name}</Text>
 		</TouchableOpacity>
 	)

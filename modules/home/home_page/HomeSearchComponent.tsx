@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/core'
 import React, { FC } from 'react'
 import { Text, View } from 'react-native'
 import { BoldText } from '../../../components/overrides/Themed'
@@ -9,8 +10,9 @@ type Props = {
 }
 
 const HomeSearchComponent: FC<Props> = (props) => {
+	const navigation = useNavigation()
 	const badges: string[] = [
-		'Popular Searches',
+		'Advanced Cure Diagnostic Center',
 		'Cleveland Clinic',
 		'24H Open Clinic',
 		'Dr. Ahmed Shah - Cardiology',
@@ -25,7 +27,11 @@ const HomeSearchComponent: FC<Props> = (props) => {
 
 			<View style={{ display: 'flex', flexWrap: 'nowrap' }}>
 				{badges.map((badge: string, index: number) => (
-					<SearchBadges key={index} name={badge} />
+					<SearchBadges
+						callback={() => navigation.navigate('_MapScreen')}
+						key={index}
+						name={badge}
+					/>
 				))}
 			</View>
 		</View>
