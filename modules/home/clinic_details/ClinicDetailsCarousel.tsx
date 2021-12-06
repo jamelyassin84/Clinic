@@ -8,7 +8,7 @@ const ClinicDetailsCarousel: FC<Props> = (props) => {
 		<View>
 			<Image
 				source={require('../../../assets/app/ClinicDetails/details.png')}
-				style={{ height: 294, width: '100%', resizeMode: 'stretch' }}
+				style={{ height: 173, width: '100%', resizeMode: 'stretch' }}
 			/>
 			<View></View>
 		</View>
