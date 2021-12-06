@@ -8,9 +8,9 @@
 		"scheme": "mawedy",
 		"userInterfaceStyle": "automatic",
 		"splash": {
-			"image": "./assets/images/splashimage.png",
+			"image": "./assets/images/logo.png",
 			"resizeMode": "contain",
-			"backgroundColor": "#ffffff"
+			"backgroundColor": "#F6FFFD"
 		},
 		"updates": {
 			"fallbackToCacheTimeout": 0
