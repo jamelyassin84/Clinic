@@ -27,6 +27,7 @@ import _UpcomingAppointments from '../modules/home/upcoming_appointments/_Upcomi
 import _ClinicDetails from '../modules/home/clinic_details/_ClinicDetails'
 import _AppointmentDetails from '../modules/home/appointment_details/_AppointmentDetails'
 import _MapScreen from '../modules/home/map_screen/_MapScreen'
+import _SelectDoctor from '../modules/home/select_doctor/_SelectDoctor'
 
 export default function Navigation({
 	colorScheme,
@@ -94,6 +95,12 @@ function RootNavigator() {
 			<Stack.Screen
 				name="_MapScreen"
 				component={_MapScreen}
+				options={{ headerShown: false }}
+			/>
+
+			<Stack.Screen
+				name="_SelectDoctor"
+				component={_SelectDoctor}
 				options={{ headerShown: false }}
 			/>
 

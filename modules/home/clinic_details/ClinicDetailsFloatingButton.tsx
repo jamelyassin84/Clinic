@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/core'
 import React, { FC } from 'react'
 import { Image, Text, View } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
@@ -5,6 +6,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 type Props = {}
 
 const ClinicDetailsFloatingButton: FC<Props> = (props) => {
+	const navigation = useNavigation()
 	return (
 		<View
 			style={{
@@ -18,7 +20,8 @@ const ClinicDetailsFloatingButton: FC<Props> = (props) => {
 				alignItems: 'center',
 				justifyContent: 'center',
 			}}>
-			<TouchableOpacity>
+			<TouchableOpacity
+				onPress={() => navigation.navigate('_SelectDoctor')}>
 				<Image
 					style={{
 						height: 105,

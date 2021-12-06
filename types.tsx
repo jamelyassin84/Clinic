@@ -24,6 +24,7 @@ export type RootStackParamList = {
 	_AppointmentDetails: undefined
 
 	_MapScreen: undefined
+	_SelectDoctor: undefined
 }
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> =
