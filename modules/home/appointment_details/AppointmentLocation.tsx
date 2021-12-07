@@ -3,7 +3,9 @@ import { Image, TouchableOpacity, View } from 'react-native'
 import Card from '../../../components/Card'
 import { BoldText, Text } from '../../../components/overrides/Themed'
 
-type Props = {}
+type Props = {
+	willShow: Function
+}
 
 const AppointmentLocation: FC<Props> = (props) => {
 	return (
@@ -72,6 +74,7 @@ const AppointmentLocation: FC<Props> = (props) => {
 			</TouchableOpacity>
 
 			<TouchableOpacity
+				onPress={() => props.willShow()}
 				style={{
 					alignItems: 'center',
 					backgroundColor: '#FBC703',

@@ -30,7 +30,7 @@ const AppointmentDoctor: FC<Props> = (props) => {
 				}}>
 				<BoldText
 					style={{ fontSize: 16, color: Colors[colorScheme].tint }}>
-					Attend
+					Attended
 				</BoldText>
 			</View>
 			<View
