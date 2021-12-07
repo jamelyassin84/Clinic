@@ -16,7 +16,7 @@ const VerificationCode: FC<Props> = (props) => {
 	const navigation = useNavigation()
 
 	return (
-		<AppScreen>
+		<AppScreen green>
 			<BackToTop />
 			<BoldText
 				style={{

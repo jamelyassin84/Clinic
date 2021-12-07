@@ -10,6 +10,7 @@ export default {
 		tabIconSelected: tintColorLight,
 		// ----App---
 		borderColor: '#CFDAE8',
+		BG: '#F6FFFD',
 	},
 	dark: {
 		text: '#000',
@@ -19,5 +20,6 @@ export default {
 		tabIconSelected: tintColorLight,
 		// ----App---
 		borderColor: '#CFDAE8',
+		BG: '#F6FFFD',
 	},
 }

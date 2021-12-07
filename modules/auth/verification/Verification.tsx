@@ -13,7 +13,7 @@ const Verification: FC<Props> = (props) => {
 	const navigation = useNavigation()
 
 	return (
-		<AppScreen>
+		<AppScreen green>
 			<BackToTop />
 			<Image
 				style={{

@@ -22,6 +22,7 @@ const VerificationInput: FC<Props> = (props) => {
 					textAlign: 'center',
 					fontFamily: 'Avenir Heavy',
 					fontSize: 24,
+					backgroundColor: 'white',
 				}}
 				value="3"
 				keyboardType="phone-pad"

@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { Image } from 'react-native'
-import { BoldText } from '../../../components/overrides/Themed'
+import { BoldText, View } from '../../../components/overrides/Themed'
 import AppScreen from '../../../components/Screen'
 import SignInBottomSheet from '../../../modals/SignInBottomSheet'
 
@@ -8,7 +8,7 @@ type Props = {}
 
 const _SignInScreen: FC<Props> = (props) => {
 	return (
-		<AppScreen>
+		<AppScreen green>
 			<Image
 				style={{
 					height: 171,

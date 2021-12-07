@@ -4,21 +4,27 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import Colors from '../constants/Colors'
 import useColorScheme from '../hooks/useColorScheme'
 
-type Props = {}
+type Props = {
+	green?: boolean
+}
 
 const AppScreen: FC<Props> = (props) => {
 	const colorScheme = useColorScheme()
 	return (
 		<SafeAreaView
 			style={{
-				backgroundColor: Colors[colorScheme].background,
+				backgroundColor: !props.green
+					? Colors[colorScheme].background
+					: Colors[colorScheme].BG,
 			}}>
 			<View
 				style={{
 					height: Dimensions.get('screen').height,
 					width: Dimensions.get('screen').width,
 					paddingTop: 10,
-					backgroundColor: Colors[colorScheme].background,
+					backgroundColor: !props.green
+						? Colors[colorScheme].background
+						: Colors[colorScheme].BG,
 				}}>
 				{props.children}
 			</View>

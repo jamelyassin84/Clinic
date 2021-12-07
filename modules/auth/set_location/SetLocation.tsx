@@ -15,7 +15,7 @@ const SetLocation: FC<Props> = (props) => {
 	const colorScheme = useColorScheme()
 
 	return (
-		<AppScreen>
+		<AppScreen green>
 			<Image
 				style={{
 					height: 177,
