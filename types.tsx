@@ -24,6 +24,11 @@ export type RootStackParamList = {
 	_AppointmentDetails: undefined
 
 	_MapScreen: undefined
+
+	_Profile: undefined
+	_BookingHistory: undefined
+	_MedicalRecords: undefined
+
 	_SelectDoctor: undefined
 }
 

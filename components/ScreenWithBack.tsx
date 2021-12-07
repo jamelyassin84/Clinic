@@ -33,6 +33,8 @@ const ScreenWithBack: FC<Props> = (props) => {
 						height: 35,
 						borderBottomWidth: 1,
 						borderBottomColor: Colors[colorScheme].borderColor,
+						position: 'relative',
+						zIndex: -1,
 					}}>
 					<TouchableOpacity
 						style={{ flex: 1 }}

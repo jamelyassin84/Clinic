@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/core'
 import React, { FC } from 'react'
 import { Image, View, TouchableOpacity } from 'react-native'
 import { BoldText, Text } from '../../../components/overrides/Themed'
@@ -8,6 +9,7 @@ type Props = {}
 
 const HomeTopBar: FC<Props> = (props) => {
 	const colorscheme = useColorScheme()
+	const navigation = useNavigation()
 
 	const [dropdownIsShowing, setDropdownIsShowing] = React.useState(false)
 
@@ -97,6 +99,7 @@ const HomeTopBar: FC<Props> = (props) => {
 				]}>
 				<TouchableOpacity
 					onPress={() => {
+						navigation.navigate('_Profile')
 						setDropdownIsShowing(false)
 					}}
 					style={{ marginTop: 12 }}>
@@ -104,6 +107,7 @@ const HomeTopBar: FC<Props> = (props) => {
 				</TouchableOpacity>
 				<TouchableOpacity
 					onPress={() => {
+						navigation.navigate('_BookingHistory')
 						setDropdownIsShowing(false)
 					}}
 					style={{ marginTop: 12 }}>
@@ -111,6 +115,7 @@ const HomeTopBar: FC<Props> = (props) => {
 				</TouchableOpacity>
 				<TouchableOpacity
 					onPress={() => {
+						navigation.navigate('_MedicalRecords')
 						setDropdownIsShowing(false)
 					}}
 					style={{ marginTop: 12 }}>

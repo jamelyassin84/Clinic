@@ -28,6 +28,9 @@ import _ClinicDetails from '../modules/home/clinic_details/_ClinicDetails'
 import _AppointmentDetails from '../modules/home/appointment_details/_AppointmentDetails'
 import _MapScreen from '../modules/home/map_screen/_MapScreen'
 import _SelectDoctor from '../modules/home/select_doctor/_SelectDoctor'
+import _Profile from '../modules/profile/_Profile'
+import _MedicalRecords from '../modules/medical_records/_MedicalRecords'
+import _BookingHistory from '../modules/booking_history/_BookingHistory'
 
 export default function Navigation({
 	colorScheme,
@@ -101,6 +104,24 @@ function RootNavigator() {
 			<Stack.Screen
 				name="_SelectDoctor"
 				component={_SelectDoctor}
+				options={{ headerShown: false }}
+			/>
+
+			<Stack.Screen
+				name="_Profile"
+				component={_Profile}
+				options={{ headerShown: false }}
+			/>
+
+			<Stack.Screen
+				name="_MedicalRecords"
+				component={_MedicalRecords}
+				options={{ headerShown: false }}
+			/>
+
+			<Stack.Screen
+				name="_BookingHistory"
+				component={_BookingHistory}
 				options={{ headerShown: false }}
 			/>
 
