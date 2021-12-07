@@ -58,7 +58,7 @@ const RateUS: FC<Props> = (props) => {
 						fontSize: 25,
 						color: '#0A2440',
 					}}>
-					Rate US!
+					Rate Us!
 				</BoldText>
 
 				<BoldText
