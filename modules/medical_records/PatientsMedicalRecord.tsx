@@ -1,5 +1,6 @@
+import { useNavigation } from '@react-navigation/core'
 import React, { FC } from 'react'
-import { Image, Text, View } from 'react-native'
+import { Image, Text, View, TouchableOpacity } from 'react-native'
 import { BoldText } from '../../components/overrides/Themed'
 import Colors from '../../constants/Colors'
 import useColorScheme from '../../hooks/useColorScheme'
@@ -14,8 +15,10 @@ type Props = {
 
 const PatientsMedicalRecord: FC<Props> = (props) => {
 	const colorScheme = useColorScheme()
+	const navigation = useNavigation()
 	return (
-		<View
+		<TouchableOpacity
+			onPress={() => navigation.navigate('PatientMedicalRecordsDetail')}
 			style={{
 				marginTop: 21,
 				backgroundColor: '#F2F4F7',
@@ -98,7 +101,7 @@ const PatientsMedicalRecord: FC<Props> = (props) => {
 					</Text>
 				</View>
 			</View>
-		</View>
+		</TouchableOpacity>
 	)
 }
 

@@ -31,6 +31,7 @@ import _SelectDoctor from '../modules/home/select_doctor/_SelectDoctor'
 import _Profile from '../modules/profile/_Profile'
 import _MedicalRecords from '../modules/medical_records/_MedicalRecords'
 import _BookingHistory from '../modules/booking_history/_BookingHistory'
+import PatientMedicalRecordsDetail from '../modules/medical_records/PatientMedicalRecordsDetail'
 
 export default function Navigation({
 	colorScheme,
@@ -122,6 +123,12 @@ function RootNavigator() {
 			<Stack.Screen
 				name="_BookingHistory"
 				component={_BookingHistory}
+				options={{ headerShown: false }}
+			/>
+
+			<Stack.Screen
+				name="PatientMedicalRecordsDetail"
+				component={PatientMedicalRecordsDetail}
 				options={{ headerShown: false }}
 			/>
 
