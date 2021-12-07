@@ -3,13 +3,15 @@ import React, { FC } from 'react'
 import { Dimensions, Text, View, TouchableOpacity, Switch } from 'react-native'
 import { BoldText } from '../../components/overrides/Themed'
 import AppScreen from '../../components/Screen'
+import ScreenWithBack from '../../components/ScreenWithBack'
 import HomeTopBar from '../home/home_page/HomeTopBar'
 
 type Props = {}
 
 const _Settings: FC<Props> = (props) => {
 	return (
-		<AppScreen>
+		<ScreenWithBack header="Settings">
+			<View style={{ height: 25 }} />
 			<View
 				style={{
 					width: Dimensions.get('screen').width - 32,
@@ -19,7 +21,7 @@ const _Settings: FC<Props> = (props) => {
 					borderRadius: 10,
 					paddingVertical: 37,
 					paddingHorizontal: 41,
-					height: Dimensions.get('screen').height - 170,
+					height: Dimensions.get('screen').height - 220,
 				}}>
 				<View style={{ flexDirection: 'row', alignItems: 'center' }}>
 					<BoldText style={{ fontSize: 16, flex: 1 }}>Sync</BoldText>
@@ -112,7 +114,7 @@ const _Settings: FC<Props> = (props) => {
 					</Text>
 				</TouchableOpacity>
 			</View>
-		</AppScreen>
+		</ScreenWithBack>
 	)
 }
 

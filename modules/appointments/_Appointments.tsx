@@ -3,6 +3,7 @@ import React, { FC } from 'react'
 import { View } from 'react-native'
 import DoctorAppointmentCard from '../../components/DoctorAppointmentCard'
 import AppScreen from '../../components/Screen'
+import ScreenWithBack from '../../components/ScreenWithBack'
 
 type Props = {}
 
@@ -10,7 +11,7 @@ const _Appointments: FC<Props> = (props) => {
 	const navigation = useNavigation()
 
 	return (
-		<AppScreen>
+		<ScreenWithBack header="Upcoming appointments">
 			<View style={{ padding: 16 }}>
 				<DoctorAppointmentCard
 					callback={() => navigation.navigate('_AppointmentDetails')}
@@ -29,7 +30,7 @@ const _Appointments: FC<Props> = (props) => {
 					image={require('../../assets/app/NearbyClinics/amber.png')}
 				/>
 			</View>
-		</AppScreen>
+		</ScreenWithBack>
 	)
 }
 
