@@ -57,6 +57,32 @@ const AppointmentLocation: FC<Props> = (props) => {
 					</Text>
 				</View>
 			</View>
+
+			<TouchableOpacity
+				style={{
+					alignItems: 'center',
+					backgroundColor: '#DBF4EB',
+					padding: 14,
+					borderRadius: 12,
+					marginTop: 25,
+				}}>
+				<BoldText style={{ color: '#00B074', fontSize: 18 }}>
+					Cancel
+				</BoldText>
+			</TouchableOpacity>
+
+			<TouchableOpacity
+				style={{
+					alignItems: 'center',
+					backgroundColor: '#FBC703',
+					padding: 14,
+					borderRadius: 12,
+					marginTop: 25,
+				}}>
+				<BoldText style={{ color: 'white', fontSize: 18 }}>
+					Rate Us
+				</BoldText>
+			</TouchableOpacity>
 		</Card>
 	)
 }

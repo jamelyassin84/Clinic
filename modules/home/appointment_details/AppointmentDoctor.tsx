@@ -1,6 +1,8 @@
 import React, { FC } from 'react'
 import { Text, TouchableOpacity, View, Image } from 'react-native'
 import { BoldText } from '../../../components/overrides/Themed'
+import Colors from '../../../constants/Colors'
+import useColorScheme from '../../../hooks/useColorScheme'
 
 type Props = {
 	doctor: string
@@ -14,10 +16,23 @@ type Props = {
 }
 
 const AppointmentDoctor: FC<Props> = (props) => {
+	const colorScheme = useColorScheme()
 	return (
 		<TouchableOpacity
 			style={{ borderBottomColor: '#F6F7F8', borderBottomWidth: 10 }}
 			onPress={() => props.callback()}>
+			<View
+				style={{
+					position: 'absolute',
+					top: 10,
+					right: 24,
+					zIndex: 10,
+				}}>
+				<BoldText
+					style={{ fontSize: 16, color: Colors[colorScheme].tint }}>
+					Attend
+				</BoldText>
+			</View>
 			<View
 				style={{
 					flexDirection: 'row',
