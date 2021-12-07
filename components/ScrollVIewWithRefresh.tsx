@@ -17,6 +17,8 @@ const ScrollVIewWithRefresh: FC<Props> = (props) => {
 			style={{
 				height: Dimensions.get('screen').height,
 				width: Dimensions.get('screen').width,
+				position: 'relative',
+				zIndex: -1,
 			}}
 			showsVerticalScrollIndicator={false}
 			refreshControl={
