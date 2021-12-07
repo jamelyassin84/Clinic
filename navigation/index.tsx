@@ -239,7 +239,7 @@ function BottomTabNavigator() {
 				name="Promotions"
 				component={_Promotions}
 				options={{
-					title: 'Promotions',
+					title: 'Offers',
 					tabBarIcon: ({ color }) => (
 						<BottomTabICon
 							sources={resolveHomeIcon('promotion')}
