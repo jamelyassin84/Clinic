@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 import { View } from 'react-native'
-import Card from '../../../components/Card'
-import { BoldText } from '../../../components/overrides/Themed'
-import { dummyClinicTimings } from './DummyTimings'
+import Card from '../../../../components/Card'
+import { BoldText } from '../../../../components/overrides/Themed'
+import { dummyClinicTimings } from '../DummyTimings'
 type Props = {}
 
 const ClinicTimings: FC<Props> = (props) => {

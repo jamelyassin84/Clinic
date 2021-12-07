@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
 import { TouchableOpacity } from 'react-native-gesture-handler'
-import Card from '../../../components/Card'
-import { BoldText, Text } from '../../../components/overrides/Themed'
-import Colors from '../../../constants/Colors'
-import useColorScheme from '../../../hooks/useColorScheme'
+import Card from '../../../../components/Card'
+import { BoldText, Text } from '../../../../components/overrides/Themed'
+import Colors from '../../../../constants/Colors'
+import useColorScheme from '../../../../hooks/useColorScheme'
 
 type Props = {}
 

@@ -31,7 +31,7 @@ const ClinicOffersTab: FC<Props> = (props) => {
 			{offers.map((offers: string, index: number) => {
 				if (index === 0) {
 					return (
-						<TouchableOpacity>
+						<TouchableOpacity key={index}>
 							<BoldText
 								style={{
 									fontSize: 16,
@@ -45,7 +45,7 @@ const ClinicOffersTab: FC<Props> = (props) => {
 					)
 				}
 				return (
-					<TouchableOpacity>
+					<TouchableOpacity key={index}>
 						<Text
 							style={{
 								fontSize: 16,

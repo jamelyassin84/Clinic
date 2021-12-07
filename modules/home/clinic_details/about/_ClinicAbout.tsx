@@ -5,10 +5,10 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 import { BoldText } from '../../../../components/overrides/Themed'
 import Colors from '../../../../constants/Colors'
 import useColorScheme from '../../../../hooks/useColorScheme'
-import About from '../About'
-import ClinicDetailsButtons from '../ClinicDetailsButtons'
+import About from './About'
+import ClinicDetailsButtons from './ClinicDetailsButtons'
 import ClinicDetailsCarousel from '../ClinicDetailsCarousel'
-import ClinicTimings from '../ClinicTimings'
+import ClinicTimings from './ClinicTimings'
 
 type Props = {
 	isShowing: Function

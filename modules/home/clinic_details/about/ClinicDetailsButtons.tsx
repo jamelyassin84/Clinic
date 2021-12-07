@@ -2,8 +2,8 @@ import { useNavigation } from '@react-navigation/core'
 import React, { FC } from 'react'
 import { Image, StyleSheet } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
-import Card from '../../../components/Card'
-import { Text, View } from '../../../components/overrides/Themed'
+import Card from '../../../../components/Card'
+import { Text, View } from '../../../../components/overrides/Themed'
 
 type Props = {}
 
@@ -14,7 +14,7 @@ const ClinicDetailsButtons: FC<Props> = (props) => {
 				<View style={style.wrapper}>
 					<TouchableOpacity style={style.button}>
 						<Image
-							source={require('../../../assets/app/ClinicDetails/call.png')}
+							source={require('../../../../assets/app/ClinicDetails/call.png')}
 							style={style.image}
 						/>
 					</TouchableOpacity>
@@ -24,7 +24,7 @@ const ClinicDetailsButtons: FC<Props> = (props) => {
 				<View style={style.wrapper}>
 					<TouchableOpacity style={style.button}>
 						<Image
-							source={require('../../../assets/app/ClinicDetails/map.png')}
+							source={require('../../../../assets/app/ClinicDetails/map.png')}
 							style={style.image}
 						/>
 					</TouchableOpacity>
@@ -34,7 +34,7 @@ const ClinicDetailsButtons: FC<Props> = (props) => {
 				<View style={style.wrapper}>
 					<TouchableOpacity style={style.button}>
 						<Image
-							source={require('../../../assets/app/ClinicDetails/instagram.png')}
+							source={require('../../../../assets/app/ClinicDetails/instagram.png')}
 							style={style.image}
 						/>
 					</TouchableOpacity>
@@ -44,7 +44,7 @@ const ClinicDetailsButtons: FC<Props> = (props) => {
 				<View style={style.wrapper}>
 					<TouchableOpacity style={style.button}>
 						<Image
-							source={require('../../../assets/app/ClinicDetails/save.png')}
+							source={require('../../../../assets/app/ClinicDetails/save.png')}
 							style={style.image}
 						/>
 					</TouchableOpacity>
