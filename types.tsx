@@ -18,6 +18,9 @@ export type RootStackParamList = {
 	Verification: undefined
 	VerificationCode: undefined
 	SetLocation: undefined
+	_PatientDetailsScreen: undefined
+	_UploadAPhotoScreen: undefined
+
 	_NearbyClinics: undefined
 	_ClinicDetails: undefined
 	_UpcomingAppointments: undefined

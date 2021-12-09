@@ -37,7 +37,8 @@ const SetLocation: FC<Props> = (props) => {
 
 			<LocationInput />
 
-			<TouchableOpacity onPress={() => navigation.navigate('Root')}>
+			<TouchableOpacity
+				onPress={() => navigation.navigate('_PatientDetailsScreen')}>
 				<Image
 					style={{
 						height: 105,
@@ -49,7 +50,8 @@ const SetLocation: FC<Props> = (props) => {
 				/>
 			</TouchableOpacity>
 
-			<TouchableOpacity onPress={() => navigation.navigate('Root')}>
+			<TouchableOpacity
+				onPress={() => navigation.navigate('_PatientDetailsScreen')}>
 				<Text
 					style={{
 						color: Colors[colorScheme].tint,
