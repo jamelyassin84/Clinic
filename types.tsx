@@ -33,6 +33,8 @@ export type RootStackParamList = {
 	_MedicalRecords: undefined
 	PatientMedicalRecordsDetail: undefined
 
+	DepartmentScreen: undefined
+
 	_SelectDoctor: undefined
 }
 

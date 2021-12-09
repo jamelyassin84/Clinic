@@ -34,6 +34,7 @@ import _BookingHistory from '../modules/booking_history/_BookingHistory'
 import PatientMedicalRecordsDetail from '../modules/medical_records/PatientMedicalRecordsDetail'
 import _PatientDetailsScreen from '../modules/auth/personal_details/_PatientDetailsScreen'
 import _UploadAPhotoScreen from '../modules/auth/personal_details/_UploadAPhotoScreen'
+import DepartmentScreen from '../modules/home/department_details/DepartmentScreen'
 
 export default function Navigation({
 	colorScheme,
@@ -143,6 +144,12 @@ function RootNavigator() {
 			<Stack.Screen
 				name="_UploadAPhotoScreen"
 				component={_UploadAPhotoScreen}
+				options={{ headerShown: false }}
+			/>
+
+			<Stack.Screen
+				name="DepartmentScreen"
+				component={DepartmentScreen}
 				options={{ headerShown: false }}
 			/>
 

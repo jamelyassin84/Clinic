@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import { Text, View } from 'react-native'
 import AppScreen from '../../../components/Screen'
 import ScrollVIewWithRefresh from '../../../components/ScrollVIewWithRefresh'
+import SelectDepartmentModal from '../../../modals/SelectDepartmentModal'
 import DoctorsList from './DoctorsList'
 import { dummyDoctorsLists } from './DummyDoctorsLists'
 import SelectDoctorHeader from './SelectDoctorHeader'
@@ -29,6 +30,7 @@ const _SelectDoctor: FC<Props> = (props) => {
 					/>
 				))}
 			</ScrollVIewWithRefresh>
+			<SelectDepartmentModal focus={true} />
 		</AppScreen>
 	)
 }
