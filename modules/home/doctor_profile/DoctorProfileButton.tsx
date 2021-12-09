@@ -1,12 +1,37 @@
+import { useNavigation } from '@react-navigation/core'
 import React, { FC } from 'react'
-import { Text, View } from 'react-native'
+import { Image, Text, View } from 'react-native'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 
 type Props = {}
 
 const DoctorProfileButton: FC<Props> = (props) => {
+	const navigation = useNavigation()
 	return (
-		<View>
-			<Text>DoctorProfileButton</Text>
+		<View
+			style={{
+				height: 100,
+				borderTopWidth: 1,
+				borderTopColor: '#CFDAE8',
+				width: '100%',
+				position: 'absolute',
+				bottom: 20,
+				backgroundColor: 'white',
+				alignItems: 'center',
+				justifyContent: 'center',
+			}}>
+			<TouchableOpacity
+				onPress={() => navigation.navigate('_SelectDoctor')}>
+				<Image
+					style={{
+						height: 105,
+						alignSelf: 'center',
+						marginTop: 20,
+						resizeMode: 'contain',
+					}}
+					source={require('../../../assets/app/DoctorProfile/button.png')}
+				/>
+			</TouchableOpacity>
 		</View>
 	)
 }
