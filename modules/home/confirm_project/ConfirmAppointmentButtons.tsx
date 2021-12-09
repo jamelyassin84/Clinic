@@ -1,7 +1,7 @@
 import { useNavigation } from '@react-navigation/core'
 import React, { FC } from 'react'
-import { Image, Text, View } from 'react-native'
-import { TouchableOpacity } from 'react-native-gesture-handler'
+import { Dimensions, Image, TouchableOpacity, View } from 'react-native'
+import { BoldText } from '../../../components/overrides/Themed'
 
 type Props = {}
 
@@ -13,22 +13,43 @@ const ConfirmAppointmentButtons: FC<Props> = (props) => {
 				height: 100,
 				borderTopWidth: 1,
 				borderTopColor: '#CFDAE8',
-				width: '100%',
+				width: Dimensions.get('screen').width,
 				backgroundColor: 'white',
 				alignItems: 'center',
 				justifyContent: 'center',
+				flexDirection: 'row-reverse',
 			}}>
-			<TouchableOpacity onPress={() => {}}>
+			<TouchableOpacity
+				style={{
+					width: '50%',
+					alignItems: 'center',
+					justifyContent: 'center',
+				}}
+				onPress={() => {}}>
 				<Image
 					style={{
-						height: 105,
+						maxHeight: '100%',
 						alignSelf: 'center',
 						marginTop: 20,
 						resizeMode: 'contain',
 					}}
-					source={require('../../../assets/app/ClinicDetails/button.png')}
+					source={require('../../../assets/app/ConfirmAppointment/confirm.png')}
 				/>
 			</TouchableOpacity>
+			<View style={{ width: '50%', paddingLeft: 15 }}>
+				<TouchableOpacity
+					style={{
+						backgroundColor: '#DBF4EB',
+						borderRadius: 12,
+						paddingVertical: 13,
+						alignItems: 'center',
+						justifyContent: 'center',
+					}}>
+					<BoldText style={{ fontSize: 18, color: '#00B074' }}>
+						Back
+					</BoldText>
+				</TouchableOpacity>
+			</View>
 		</View>
 	)
 }
