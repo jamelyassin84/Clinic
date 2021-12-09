@@ -8,6 +8,7 @@ import { Dimensions } from 'react-native'
 import ScheduleNowButton from './ScheduleNowButton'
 import CalendarComponent from './Calendar'
 import ConfirmAppointmentModal from '../../../modals/ConfirmAppointmentModal'
+import CenterModal from '../../../modals/CenterModal'
 
 type Props = {}
 
@@ -21,6 +22,7 @@ const _AppointmentSchedule: FC<Props> = (props) => {
 			</ScreenWithBack>
 			<ScheduleNowButton />
 			<ConfirmAppointmentModal />
+			<CenterModal />
 		</View>
 	)
 }
