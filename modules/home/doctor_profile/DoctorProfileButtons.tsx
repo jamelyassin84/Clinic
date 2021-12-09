@@ -11,6 +11,7 @@ const DoctorProfileButtons: FC<Props> = (props) => {
 				flexDirection: 'row',
 				alignItems: 'center',
 				justifyContent: 'center',
+				marginTop: 25,
 			}}>
 			<TouchableOpacity>
 				<Image

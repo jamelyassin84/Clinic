@@ -6,7 +6,11 @@ type Props = {}
 
 const About: FC<Props> = (props) => {
 	return (
-		<View style={{ padding: 16 }}>
+		<View
+			style={{
+				padding: 16,
+				paddingTop: 19,
+			}}>
 			<BoldText style={{ fontSize: 16 }}>About</BoldText>
 
 			<Text

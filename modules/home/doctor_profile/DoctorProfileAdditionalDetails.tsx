@@ -13,7 +13,9 @@ const DoctorProfileAdditionalDetails: FC<Props> = (props) => {
 				alignItems: 'center',
 				justifyContent: 'center',
 				marginTop: 28,
-				marginBottom: 73,
+				borderBottomWidth: 10,
+				borderBottomColor: '#F5F5F5',
+				paddingBottom: 23,
 			}}>
 			<View style={{ flex: 1 }}>
 				<BoldText
