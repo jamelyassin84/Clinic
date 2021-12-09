@@ -14,8 +14,8 @@ const _SelectDoctor: FC<Props> = (props) => {
 	return (
 		<AppScreen>
 			<SelectDoctorHeader />
-
 			<ScrollVIewWithRefresh onRefresh={() => {}} loading={false}>
+				<View style={{ height: 50 }} />
 				<SelectDoctorSearch />
 				<SelectDoctorTabs />
 

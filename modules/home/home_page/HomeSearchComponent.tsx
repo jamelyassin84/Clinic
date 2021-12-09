@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/core'
 import React, { FC } from 'react'
-import { Text, View } from 'react-native'
+import { View } from 'react-native'
 import { BoldText } from '../../../components/overrides/Themed'
 import SearchBadges from '../../../components/SearchBadges'
 import HomeSearchInModal from './HomeSearchInModal'
@@ -11,12 +11,26 @@ type Props = {
 
 const HomeSearchComponent: FC<Props> = (props) => {
 	const navigation = useNavigation()
-	const badges: string[] = [
-		'Advanced Cure Diagnostic Center',
-		'Cleveland Clinic',
-		'24H Open Clinic',
-		'Dr. Ahmed Shah - Cardiology',
+
+	const badges: any[] = [
+		{
+			name: 'Advanced Cure Diagnostic Center',
+			type: 'clinic',
+		},
+		{
+			name: 'Cleveland Clinic',
+			type: 'clinic',
+		},
+		{
+			name: '24H Open Clinic',
+			type: 'clinic',
+		},
+		{
+			name: 'Dr. Ahmed Shah - Cardiology',
+			type: 'doctor',
+		},
 	]
+
 	return (
 		<View>
 			<HomeSearchInModal blurModal={() => props.blurModal()} />
@@ -26,11 +40,15 @@ const HomeSearchComponent: FC<Props> = (props) => {
 			</BoldText>
 
 			<View style={{ display: 'flex', flexWrap: 'nowrap' }}>
-				{badges.map((badge: string, index: number) => (
+				{badges.map((badge: any, index: number) => (
 					<SearchBadges
-						callback={() => navigation.navigate('_MapScreen')}
+						callback={() =>
+							badge.type === 'clinic'
+								? navigation.navigate('_MapScreen')
+								: navigation.navigate('_SelectDoctor')
+						}
 						key={index}
-						name={badge}
+						name={badge.name}
 					/>
 				))}
 			</View>

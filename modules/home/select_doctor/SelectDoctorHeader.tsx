@@ -9,16 +9,22 @@ const SelectDoctorHeader: FC<Props> = (props) => {
 	return (
 		<View
 			style={{
-				display: 'flex',
-				paddingHorizontal: 9,
+				paddingHorizontal: 23,
 				paddingVertical: 15,
+				flexDirection: 'row',
+				alignItems: 'center',
+				paddingLeft: 17,
 			}}>
 			<Image
+				style={{ height: 24, width: 24, marginRight: 15 }}
 				source={require('../../../assets/app/DoctorsList/back.png')}
 			/>
-			<BoldText>Select doctor</BoldText>
+			<BoldText style={{ fontSize: 16, marginRight: 'auto' }}>
+				Select doctor
+			</BoldText>
+
 			<TouchableOpacity>
-				<Text>Cancel</Text>
+				<Text style={{ fontSize: 15, color: '#00B074' }}>Cancel</Text>
 			</TouchableOpacity>
 		</View>
 	)
