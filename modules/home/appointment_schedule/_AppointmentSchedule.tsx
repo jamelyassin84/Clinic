@@ -6,6 +6,8 @@ import Calendar from './Calendar'
 import { View } from '../../../components/overrides/Themed'
 import { Dimensions } from 'react-native'
 import ScheduleNowButton from './ScheduleNowButton'
+import CalendarComponent from './Calendar'
+import ConfirmAppointmentModal from '../../../modals/ConfirmAppointmentModal'
 
 type Props = {}
 
@@ -14,10 +16,11 @@ const _AppointmentSchedule: FC<Props> = (props) => {
 		<View style={{ height: Dimensions.get('screen').height }}>
 			<ScreenWithBack header="Select date & time">
 				<AppointmentTab />
-				<Calendar />
+				<CalendarComponent />
 				<ChooseTime />
 			</ScreenWithBack>
 			<ScheduleNowButton />
+			<ConfirmAppointmentModal />
 		</View>
 	)
 }
