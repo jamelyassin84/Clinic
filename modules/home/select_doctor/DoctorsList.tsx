@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/core'
 import React, { FC } from 'react'
 import { Image, Text, View } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
@@ -11,8 +12,9 @@ type Props = {
 }
 
 const DoctorsList: FC<Props> = (props) => {
+	const navigation = useNavigation()
 	return (
-		<TouchableOpacity>
+		<TouchableOpacity onPress={() => navigation.navigate('_DoctorProfile')}>
 			<View
 				style={{
 					flexDirection: 'row',

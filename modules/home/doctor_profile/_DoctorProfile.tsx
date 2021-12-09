@@ -1,10 +1,12 @@
 import React, { FC } from 'react'
 import { Dimensions } from 'react-native'
-import { BoldText, Text, View } from '../../../components/overrides/Themed'
+import { View } from '../../../components/overrides/Themed'
 import ScreenWithBack from '../../../components/ScreenWithBack'
 import About from './About'
 import DoctorImageAndDetails from './DoctorImageAndDetails'
+import DoctorProfileAdditionalDetails from './DoctorProfileAdditionalDetails'
 import DoctorProfileButton from './DoctorProfileButton'
+import DoctorProfileButtons from './DoctorProfileButtons'
 
 type Props = {}
 
@@ -19,6 +21,9 @@ const _DoctorProfile: FC<Props> = (props) => {
 					yearsOfExperience={25}
 					image={require('../../../assets/app/Home/doctor.png')}
 				/>
+				<DoctorProfileButtons />
+				<DoctorProfileAdditionalDetails />
+
 				<About />
 			</ScreenWithBack>
 			<DoctorProfileButton />
