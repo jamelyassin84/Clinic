@@ -5,7 +5,7 @@ import ChooseTime from './ChooseTime'
 import { View } from '../../../components/overrides/Themed'
 import { Dimensions } from 'react-native'
 import ScheduleNowButton from './ScheduleNowButton'
-import CalendarComponent from './Calendar'
+import CalendarComponent from './CalendarComponent'
 import ConfirmAppointmentModal from '../../../modals/ConfirmAppointmentModal'
 import CenterModal from '../../../modals/CenterModal'
 
