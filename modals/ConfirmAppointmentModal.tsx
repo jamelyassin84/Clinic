@@ -4,7 +4,9 @@ import BottomSheet, { BottomSheetBackdrop } from '@gorhom/bottom-sheet'
 import SignInBottomModal from '../modules/auth/sign-in/SignInBottomModal'
 import _ConfirmAppointmentComponent from '../modules/home/confirm_project/_ConfirmAppointmentComponent'
 
-type Props = {}
+type Props = {
+	willConfirm: Function
+}
 
 const ConfirmAppointmentModal: FC<Props> = (props) => {
 	const bottomSheetRef = React.useRef<BottomSheet>(null)
@@ -45,7 +47,11 @@ const ConfirmAppointmentModal: FC<Props> = (props) => {
 				/>
 			)}
 			onChange={handleSheetChanges}>
-			<_ConfirmAppointmentComponent />
+			<_ConfirmAppointmentComponent
+				willConfirm={() => {
+					props.willConfirm()
+				}}
+			/>
 		</BottomSheet>
 	)
 }

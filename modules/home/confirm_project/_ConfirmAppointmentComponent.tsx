@@ -4,14 +4,20 @@ import ConfirmAppointmentBody from './ConfirmAppointmentBody'
 import ConfirmAppointmentButtons from './ConfirmAppointmentButtons'
 import ConfirmAppointmentHeader from './ConfirmAppointmentHeader'
 
-type Props = {}
+type Props = {
+	willConfirm: Function
+}
 
 const _ConfirmAppointmentComponent: FC<Props> = (props) => {
 	return (
 		<View>
 			<ConfirmAppointmentHeader />
 			<ConfirmAppointmentBody />
-			<ConfirmAppointmentButtons />
+			<ConfirmAppointmentButtons
+				willConfirm={() => {
+					props.willConfirm()
+				}}
+			/>
 		</View>
 	)
 }

@@ -3,7 +3,9 @@ import React, { FC } from 'react'
 import { Dimensions, Image, TouchableOpacity, View } from 'react-native'
 import { BoldText } from '../../../components/overrides/Themed'
 
-type Props = {}
+type Props = {
+	willConfirm: Function
+}
 
 const ConfirmAppointmentButtons: FC<Props> = (props) => {
 	const navigation = useNavigation()
@@ -25,7 +27,7 @@ const ConfirmAppointmentButtons: FC<Props> = (props) => {
 					alignItems: 'center',
 					justifyContent: 'center',
 				}}
-				onPress={() => {}}>
+				onPress={() => props.willConfirm()}>
 				<Image
 					style={{
 						maxHeight: '100%',

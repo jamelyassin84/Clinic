@@ -4,20 +4,26 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 import { BoldText, Text } from '../components/overrides/Themed'
 import DoctorCard from '../modules/home/appointment_confirmed/DoctorCard'
 
-type Props = {}
+type Props = {
+	isShowing: boolean
+	willDismiss: Function
+}
 
 const CenterModal: FC<Props> = (props) => {
 	return (
 		<View
-			style={{
-				position: 'absolute',
-				zIndex: 99,
-				backgroundColor: 'rgba(0,0,0,0.7)',
-				width: Dimensions.get('screen').width,
-				height: Dimensions.get('screen').height,
-				alignItems: 'center',
-				justifyContent: 'center',
-			}}>
+			style={[
+				{
+					position: 'absolute',
+					zIndex: 99,
+					backgroundColor: 'rgba(0,0,0,0.7)',
+					width: Dimensions.get('screen').width,
+					height: Dimensions.get('screen').height,
+					alignItems: 'center',
+					justifyContent: 'center',
+				},
+				props.isShowing ? {} : { top: -1500 },
+			]}>
 			<View
 				style={{
 					backgroundColor: 'white',
@@ -55,7 +61,9 @@ const CenterModal: FC<Props> = (props) => {
 					image={require('../assets/app/NearbyClinics/amber.png')}
 				/>
 
-				<TouchableOpacity style={{ marginTop: 26 }}>
+				<TouchableOpacity
+					style={{ marginTop: 26 }}
+					onPress={() => props.willDismiss()}>
 					<Text style={{ color: '#00B074', fontSize: 16 }}>
 						Dismiss
 					</Text>
