@@ -35,6 +35,7 @@ import PatientMedicalRecordsDetail from '../modules/medical_records/PatientMedic
 import _PatientDetailsScreen from '../modules/auth/personal_details/_PatientDetailsScreen'
 import _UploadAPhotoScreen from '../modules/auth/personal_details/_UploadAPhotoScreen'
 import DepartmentScreen from '../modules/home/department_details/DepartmentScreen'
+import _DoctorProfile from '../modules/home/doctor_profile/_DoctorProfile'
 
 export default function Navigation({
 	colorScheme,
@@ -76,13 +77,11 @@ function RootNavigator() {
 				component={SetLocation}
 				options={{ headerShown: false }}
 			/>
-
 			<Stack.Screen
 				name="_NearbyClinics"
 				component={_NearbyClinics}
 				options={{ headerShown: false }}
 			/>
-
 			<Stack.Screen
 				name="_ClinicDetails"
 				component={_ClinicDetails}
@@ -98,58 +97,54 @@ function RootNavigator() {
 				component={_AppointmentDetails}
 				options={{ headerShown: false }}
 			/>
-
 			<Stack.Screen
 				name="_MapScreen"
 				component={_MapScreen}
 				options={{ headerShown: false }}
 			/>
-
 			<Stack.Screen
 				name="_SelectDoctor"
 				component={_SelectDoctor}
 				options={{ headerShown: false }}
 			/>
-
 			<Stack.Screen
 				name="_Profile"
 				component={_Profile}
 				options={{ headerShown: false }}
 			/>
-
 			<Stack.Screen
 				name="_MedicalRecords"
 				component={_MedicalRecords}
 				options={{ headerShown: false }}
 			/>
-
 			<Stack.Screen
 				name="_BookingHistory"
 				component={_BookingHistory}
 				options={{ headerShown: false }}
 			/>
-
 			<Stack.Screen
 				name="PatientMedicalRecordsDetail"
 				component={PatientMedicalRecordsDetail}
 				options={{ headerShown: false }}
 			/>
-
 			<Stack.Screen
 				name="_PatientDetailsScreen"
 				component={_PatientDetailsScreen}
 				options={{ headerShown: false }}
 			/>
-
 			<Stack.Screen
 				name="_UploadAPhotoScreen"
 				component={_UploadAPhotoScreen}
 				options={{ headerShown: false }}
 			/>
-
 			<Stack.Screen
 				name="DepartmentScreen"
 				component={DepartmentScreen}
+				options={{ headerShown: false }}
+			/>
+			<Stack.Screen
+				name="_DoctorProfile"
+				component={_DoctorProfile}
 				options={{ headerShown: false }}
 			/>
 
