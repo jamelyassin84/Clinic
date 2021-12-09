@@ -95,7 +95,7 @@ const HomeTopBar: FC<Props> = (props) => {
 						paddingBottom: 32,
 						marginTop: 29,
 					},
-					dropdownIsShowing ? {} : { display: 'none' },
+					dropdownIsShowing ? {} : { top: -500 },
 				]}>
 				<TouchableOpacity
 					onPress={() => {
