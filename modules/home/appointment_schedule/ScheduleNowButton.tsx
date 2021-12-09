@@ -5,7 +5,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 
 type Props = {}
 
-const DoctorProfileButton: FC<Props> = (props) => {
+const ScheduleNowButton: FC<Props> = (props) => {
 	const navigation = useNavigation()
 	return (
 		<View
@@ -29,11 +29,11 @@ const DoctorProfileButton: FC<Props> = (props) => {
 						marginTop: 20,
 						resizeMode: 'contain',
 					}}
-					source={require('../../../assets/app/DoctorProfile/button.png')}
+					source={require('../../../assets/app/DateAndTime/button.png')}
 				/>
 			</TouchableOpacity>
 		</View>
 	)
 }
 
-export default DoctorProfileButton
+export default ScheduleNowButton

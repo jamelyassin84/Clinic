@@ -36,6 +36,7 @@ import _PatientDetailsScreen from '../modules/auth/personal_details/_PatientDeta
 import _UploadAPhotoScreen from '../modules/auth/personal_details/_UploadAPhotoScreen'
 import DepartmentScreen from '../modules/home/department_details/DepartmentScreen'
 import _DoctorProfile from '../modules/home/doctor_profile/_DoctorProfile'
+import _AppointmentSchedule from '../modules/home/appointment_schedule/_AppointmentSchedule'
 
 export default function Navigation({
 	colorScheme,
@@ -145,6 +146,11 @@ function RootNavigator() {
 			<Stack.Screen
 				name="_DoctorProfile"
 				component={_DoctorProfile}
+				options={{ headerShown: false }}
+			/>
+			<Stack.Screen
+				name="_AppointmentSchedule"
+				component={_AppointmentSchedule}
 				options={{ headerShown: false }}
 			/>
 

@@ -35,6 +35,7 @@ export type RootStackParamList = {
 
 	DepartmentScreen: undefined
 	_DoctorProfile: undefined
+	_AppointmentSchedule: undefined
 
 	_SelectDoctor: undefined
 }
