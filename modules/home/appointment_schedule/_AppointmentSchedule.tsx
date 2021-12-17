@@ -1,6 +1,5 @@
 import React, { FC } from 'react'
 import ScreenWithBack from '../../../components/ScreenWithBack'
-import AppointmentTab from './AppointmentTab'
 import ChooseTime from './ChooseTime'
 import { View } from '../../../components/overrides/Themed'
 import { Dimensions } from 'react-native'
@@ -8,6 +7,7 @@ import ScheduleNowButton from './ScheduleNowButton'
 import CalendarComponent from './CalendarComponent'
 import ConfirmAppointmentModal from '../../../modals/ConfirmAppointmentModal'
 import CenterModal from '../../../modals/CenterModal'
+import AppointmentTab from './AppointMentTab'
 
 type Props = {}
 
